@@ -68,7 +68,7 @@ public class SMSListener extends BroadcastReceiver {
                             boolean isUpdated = dbManager.UpdateDetails(no,message.getPower(),message.getPump());
 
                             String[] params = {message.getSender(), message.getPower(), message.getPump(), message.getErr(),
-                                    message.getEventHrs(), message.getAuto()};
+                                    message.getEventHrs(), message.getAuto(),message.getTm()};
                             //new Pushdata().execute(params);
                             Pushdata asyncTask = new Pushdata(new AsyncResponse() {
                                 @Override
